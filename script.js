@@ -18,4 +18,11 @@
 const athlete1 = new Athlete('mattia', 'drago', '1980', 'm', 'atletica', [3, 5, 7, 2, 10], 'y')
 console.log(athlete1); 
 console.log('Age: ', athlete1.getAge()); 
-console.log(athlete1.toString());
+console.log(athlete1.toString()); 
+console.log(athlete1.bestResult()); 
+
+const athlete2 = new Athlete('Lucia', 'Prese', '1995', 'f', 'Softball', [6, 4, 9, 1, 5], 'n')
+console.log(athlete2); 
+console.log('Age: ', athlete2.getAge()); 
+console.log(athlete2.toString()); 
+console.log(athlete2.bestResult());

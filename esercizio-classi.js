@@ -18,21 +18,31 @@ class Athlete{
         return age;
     } 
 
-    bestResult(){ 
-        
+    bestResult(athlete){ 
+
+        let selectedElement = 0;
+                
+        for (const point of this.palmares) {
+                    
+            if (selectedElement < point) {
+            selectedElement = point;
+            }
+        } 
+            
+        return selectedElement;
     } 
 
     toString(){ 
         
         const gender = this.gender === 'f' ? 'female' : 'male'; 
-        const retired = this.isRetired ==='Yes' ? 'Yes': 'No';
+        const retired = this.isRetired ==='y' ? 'Yes': 'No';
     
         const athleteString = 'Name: ' + this.name + '\n' + 
                               'Surname: ' + this.surname + '\n' + 
                               'Age: ' + this.getAge() + '\n' + 
                               'Gender: ' + gender + '\n'+  
                               'Sport: ' + this.sport + '\n' + 
-                              'Palmares: ' + this.palmares + '\n' + 
+                              'Best score: ' + this.bestResult() + '\n' + 
                               'Retired: ' + retired;
         return athleteString;
     }
