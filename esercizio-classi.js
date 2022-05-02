@@ -19,22 +19,21 @@ class Athlete{
     } 
 
     bestResult(){ 
-
+        
     } 
 
     toString(){ 
         
-        const gender = this.gender === 'female' ? 'female' : 'male'; 
+        const gender = this.gender === 'f' ? 'female' : 'male'; 
         const retired = this.isRetired ==='Yes' ? 'Yes': 'No';
     
         const athleteString = 'Name: ' + this.name + '\n' + 
                               'Surname: ' + this.surname + '\n' + 
                               'Age: ' + this.getAge() + '\n' + 
-                              'Gender: ' + this.gender + '\n'+  
+                              'Gender: ' + gender + '\n'+  
                               'Sport: ' + this.sport + '\n' + 
                               'Palmares: ' + this.palmares + '\n' + 
-                              'Retired: ' + this.retired;
-
+                              'Retired: ' + retired;
         return athleteString;
     }
 
