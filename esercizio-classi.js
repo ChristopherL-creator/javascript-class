@@ -12,7 +12,10 @@ class Athlete{
     }
      
     getAge(){ 
-
+        const now = new Date(); 
+        const year = now.getFullYear(); 
+        const age = year - this.yob; 
+        return age;
     } 
 
     bestResult(){ 
@@ -20,7 +23,19 @@ class Athlete{
     } 
 
     toString(){ 
+        
+        const gender = this.gender === 'female' ? 'female' : 'male'; 
+        const retired = this.isRetired ==='Yes' ? 'Yes': 'No';
+    
+        const athleteString = 'Name: ' + this.name + '\n' + 
+                              'Surname: ' + this.surname + '\n' + 
+                              'Age: ' + this.getAge() + '\n' + 
+                              'Gender: ' + this.gender + '\n'+  
+                              'Sport: ' + this.sport + '\n' + 
+                              'Palmares: ' + this.palmares + '\n' + 
+                              'Retired: ' + this.retired;
 
+        return athleteString;
     }
 
 }
